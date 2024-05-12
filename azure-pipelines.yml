@@ -18,7 +18,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: continuous_ci_cd
+      vmImage: ubuntu-latest
     steps:
     - task: Docker@2
       inputs:
