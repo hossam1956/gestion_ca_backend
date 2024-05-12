@@ -27,9 +27,3 @@ stages:
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
  
-    - task: AzureRmWebAppDeployment@4
-      inputs:
-        ConnectionType: 'PublishProfile'
-        PublishProfilePath: '$(System.DefaultWorkingDirectory)/**/*.pubxml'
-        PublishProfilePassword: '123456'
-        packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
