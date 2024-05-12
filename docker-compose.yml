@@ -1,4 +1,4 @@
-version: '2.24.6'
+version: '3.8'
 services:
   mysql:
     container_name: mysql-cn
