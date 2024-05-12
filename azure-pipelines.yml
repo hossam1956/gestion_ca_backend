@@ -27,13 +27,6 @@ stages:
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
  
-    - task: DockerCompose@0
-      inputs:
-        containerregistrytype: 'Container Registry'
-        dockerRegistryEndpoint: 'service4iir'
-        dockerComposeFile: '**/docker-compose.yml'
-        action: 'Run a Docker Compose command'
-        dockerComposeCommand: 'docker-compose up'
     - task: AzureRmWebAppDeployment@4
       inputs:
         ConnectionType: 'PublishProfile'
